@@ -125,12 +125,12 @@
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-primaryDark">
+        <div id="mobile-menu" class="hidden md:hidden bg-primary">
             <div class="px-4 pt-2 pb-6 space-y-3 shadow-lg">
-                <a href="#inicio" class="block text-white font-medium border-b border-white/10 pb-2">Inicio</a>
                 <a href="#trayectoria" class="block text-white font-medium border-b border-white/10 pb-2">Trayectoria</a>
                 <a href="#especialidades" class="block text-white font-medium border-b border-white/10 pb-2">Especialidades</a>
                 <a href="#consultorios" class="block text-white font-medium border-b border-white/10 pb-2">Consultorios</a>
+                <a href="#contacto" class="block text-white font-medium border-b border-white/10 pb-2">Contacto</a>
                 <a href="https://wa.me/5491168080580?text=Hola,%20quisiera%20pedir%20un%20turno%20con%20el%20Dr.%20Mondino" target="_blank" class="block w-full text-center bg-white text-primary font-bold py-3 rounded-full mt-4">
                     Pedir Turno
                 </a>
@@ -150,9 +150,9 @@
                     <p class="text-xl text-gray-600 font-normal max-w-lg mx-auto md:mx-0 leading-relaxed">
                         Precisión diagnóstica y tratamientos de vanguardia para restablecer su bienestar.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-8 justify-center md:justify-start pt-6">
-                        <a href="#consultorios" class="hero-btn text-gray-900 font-bold">Ver Consultorios</a>
-                        <a href="#contacto" class="hero-btn text-gray-900 font-bold">Agendar Turno</a>
+                    <div class="flex flex-col sm:flex-row gap-6 sm:gap-8 items-center md:items-start justify-center md:justify-start pt-6">
+                        <a href="#consultorios" class="hero-btn text-gray-900 font-bold inline-block">Ver Consultorios</a>
+                        <a href="#contacto" class="hero-btn text-gray-900 font-bold inline-block">Agendar Turno</a>
                     </div>
                 </div>
 
@@ -434,18 +434,25 @@
         </div>
     </section>
 
-    <!-- FOOTER ROBUSTO (Recuperado) -->
+    <!-- FOOTER ROBUSTO -->
     <footer class="bg-primary text-white pt-16 pb-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center border-b border-black-700 pb-8 mb-8">
-            <div class="mb-6 md:mb-0 text-center md:text-left">
+        <!-- Contenedor Superior (Info del Dr.) -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center pb-8">
+            <div class="mb-6 md:mb-0 text-center md:text-left w-full">
                 <h4 class="text-2xl font-serif text-white tracking-wide">Dr. Nicolas Mondino</h4>
-                <p class="text-gray-400 mt-2 font-light">Especialista en Cirugía de Mano y Miembro Superior</p>
+                <p class="text-blue-200 mt-2 font-light">Especialista en Cirugía de Mano y Miembro Superior</p>
             </div>
         </div>
         
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm font-light">
+        <!-- Línea Separadora Contenida -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="w-full border-t border-white/20 mb-8"></div>
+        </div>
+
+        <!-- Contenedor Inferior (Copyright) -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-blue-200 text-sm font-light text-center md:text-left gap-4 md:gap-0">
             <p>&copy; 2026 Dr. Nicolas Mondino. Todos los derechos reservados.</p>
-            <p class="mt-4 md:mt-0 text-gray-400 text-sm font-light">Diseño web por Guido Scotti</p>
+            <p class="font-bold text-white">Diseño web por Guido Scotti</p>
         </div>
     </footer>
 
