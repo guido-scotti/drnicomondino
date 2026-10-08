@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Nicolas Mondino | Traumatología y Ortopedia</title>
-    
-    <!-- FAVICON (Espacio preparado para el logo) -->
-    <!-- TODO: Descomentar esta línea cuando tengas el logo y poner la ruta correcta -->
-    <!-- <link rel="icon" href="img/logo-dr.png" type="image/png"> -->
+
+    <link rel="icon" href="img/logoNicoMondino2.png" type="image/png"> 
     
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +20,6 @@
             theme: {
                 extend: {
                     colors: {
-                        /* Tonos inspirados en Visual Studio Code (Celeste/Azul claro) */
                         primary: '#0098FF', 
                         primaryDark: '#007ACC', 
                         secondary: '#23A9F2', 
@@ -60,7 +57,6 @@
             width: 100%;
         }
 
-        /* Subrayado Hero modificado: Base Primario, Hover Primario Oscuro */
         .hero-btn {
             position: relative;
             text-decoration: none;
@@ -76,7 +72,7 @@
             height: 2px;
             bottom: 0;
             left: 0;
-            background-color: #0098FF; /* Azul primario base */
+            background-color: #0098FF;
         }
         .hero-btn::after {
             content: '';
@@ -85,7 +81,7 @@
             height: 2px;
             bottom: 0;
             left: 0;
-            background-color: #007ACC; /* Azul oscuro al hover */
+            background-color: #007ACC;
             transition: width 0.5s ease;
         }
         .hero-btn:hover::after {
@@ -99,8 +95,7 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
-        
-        /* Animación Modal */
+
         .modal-enter {
             opacity: 0;
             transform: scale(0.95);
@@ -117,13 +112,10 @@
     <!-- NAVBAR -->
     <header class="fixed w-full bg-primary shadow-lg z-50 top-0">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
+            <div class="flex justify-between items-center h-24">
                 <div class="flex-shrink-0 flex items-center">
-                    <!-- LOGO NAVBAR (Espacio preparado) -->
-                    <!-- TODO: Descomentar img cuando tengas el logo -->
-                    <!-- <img src="img/logo.png" alt="Logo Dr Mondino" class="h-10 w-auto mr-3"> -->
-                    <a href="#" class="text-2xl font-serif text-white tracking-wide font-medium flex items-center gap-2">
-                        Dr. Nicolas Mondino
+                    <a href="#" class="flex items-center">
+                        <img src="img/logoNicoMondino2.png" alt="Logo Dr Mondino" class="h-16 md:h-20 w-auto transition-transform duration-300 hover:scale-105">
                     </a>
                 </div>
                 
@@ -132,8 +124,7 @@
                     <a href="#especialidades" class="text-white font-medium text-[1.05rem] nav-link">Especialidades</a>
                     <a href="#consultorios" class="text-white font-medium text-[1.05rem] nav-link">Consultorios</a>
                     <a href="#contacto" class="text-white font-medium text-[1.05rem] nav-link">Contacto</a>
-                    
-                    <!-- Botón Navbar abre el modal -->
+
                     <button onclick="openWpModal()" class="bg-white text-primary px-6 py-2.5 rounded-full font-bold hover:bg-blue-50 hover:shadow-lg hover:scale-105 transition-all duration-300 ml-4">
                         Pedir Turno
                     </button>
@@ -161,39 +152,33 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section id="inicio" class="min-h-screen flex items-center pt-20 bg-blue-50">
+    <section id="inicio" class="min-h-screen flex items-center pt-24 bg-blue-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12">
             <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
-                <div class="w-full md:w-1/2 space-y-8 text-center md:text-left z-10">
+                <div class="w-full md:w-1/2 space-y-6 md:space-y-8 text-center md:text-left z-10">
                     
-                    <!-- LOGO HERO (Espacio preparado) -->
-                    <!-- TODO: Descomentar img cuando tengas el logo -->
-                    <div class="flex justify-center md:justify-start mb-4">
-                       <!-- <img src="img/logo.png" alt="Logo Dr Mondino" class="h-16 w-auto"> -->
-                    </div>
-
                     <div>
-                        <h1 class="text-4xl md:text-5xl font-serif text-gray-900 leading-tight mb-2">
-                            Cirugía de Mano y Miembro Superior
-                        </h1>
-                        <h2 class="text-3xl md:text-4xl font-serif text-primary leading-tight">
+                        <h2 class="text-2xl sm:text-3xl md:text-4xl font-serif text-primary leading-tight mb-1 md:mb-2 whitespace-nowrap md:whitespace-normal">
                             Traumatología y Ortopedia
                         </h2>
+                        <h1 class="text-4xl sm:text-5xl md:text-6xl font-serif text-gray-900 leading-tight mb-2">
+                            Cirugía de Mano y Miembro Superior
+                        </h1>
                     </div>
 
-                    <p class="text-xl text-gray-600 font-normal max-w-lg mx-auto md:mx-0 leading-relaxed">
+                    <p class="text-lg md:text-xl text-gray-600 font-normal max-w-lg mx-auto md:mx-0 leading-relaxed px-4 md:px-0">
                         Precisión diagnóstica y tratamientos de vanguardia para restablecer su bienestar.
                     </p>
+                    
                     <div class="flex flex-col sm:flex-row gap-6 sm:gap-8 items-center md:items-start justify-center md:justify-start pt-6">
                         <a href="#consultorios" class="hero-btn text-gray-900 font-bold inline-block">Ver Consultorios</a>
-                        <!-- Al hacer click en agendar turno en el hero, también mandamos al modal por coherencia -->
                         <button onclick="openWpModal()" class="hero-btn text-gray-900 font-bold inline-block">Agendar Turno</button>
                     </div>
                 </div>
 
                 <div class="w-full md:w-1/2">
-                    <div class="aspect-[4/5] bg-gray-200 shadow-2xl flex items-center justify-center overflow-hidden border-8 border-white rounded-xl">
-                        <span class="text-gray-400 font-medium text-center"><i class="fa-solid fa-user-doctor text-6xl block mb-2"></i> Foto Dr. Mondino</span>
+                    <div class="flex justify-center mb-4">
+                       <img src="img/logoNicoMondino.png" alt="Logo Dr Mondino" class="h-72 md:h-[28rem] w-auto max-w-full transition-transform duration-400 hover:scale-105">
                     </div>
                 </div>
             </div>
@@ -209,7 +194,7 @@
                     <div class="aspect-[3/4] bg-primaryDark shadow-2xl flex items-center justify-center relative border-4 border-white/10 overflow-hidden">
                         <div id="trayectoria-slides" class="w-full h-full relative">
                             <div class="slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-100 bg-gray-800 flex items-center justify-center">
-                                <span class="text-white/50"><i class="fa-regular fa-image text-5xl block text-center mb-2"></i> Foto 1</span>
+                                <img src="img/fotoNicoMondino.jpg" alt="Dr. Mondino" class="w-full h-full object-cover">
                             </div>
                             <div class="slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0 bg-gray-700 flex items-center justify-center">
                                 <span class="text-white/50"><i class="fa-regular fa-image text-5xl block text-center mb-2"></i> Foto 2</span>
@@ -240,7 +225,13 @@
                             <span class="bg-white text-primary rounded-full w-5 h-5 flex items-center justify-center mt-1 mr-4 shrink-0 shadow-sm">
                                 <i class="fa-solid fa-check text-[10px]"></i>
                             </span>
-                            <span>Atención en centros médicos de primer nivel (San Isidro, Nordelta, Pilar y CABA).</span>
+                            <span>Miembro de la Asociación Argentina de ortopedia y traumatología.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-white text-primary rounded-full w-5 h-5 flex items-center justify-center mt-1 mr-4 shrink-0 shadow-sm">
+                                <i class="fa-solid fa-check text-[10px]"></i>
+                            </span>
+                            <span>Miembro de la Asociación Argentina de cirugía de la mano y reconstructiva del miembro superior.</span>
                         </li>
                     </ul>
                 </div>
@@ -257,45 +248,45 @@
                 <p class="text-gray-600 max-w-2xl mx-auto font-medium text-xl">Abordaje integral y diagnóstico preciso para cada patología.</p>
             </div>
             
+            <!-- Card 1 -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Card 1 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group relative overflow-hidden">
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group relative overflow-hidden text-center md:text-left flex flex-col items-center md:items-start">
                     <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -z-10 transition-transform group-hover:scale-110"></div>
                     <div class="text-primary text-4xl mb-6 bg-white w-16 h-16 rounded-full flex items-center justify-center shadow-sm border border-gray-50 group-hover:bg-primary group-hover:text-white transition-colors duration-500">
                         <i class="fa-solid fa-hand-dots"></i>
                     </div>
-                    <h3 class="text-xl font-serif mb-3 text-gray-900">Cirugía de Mano</h3>
-                    <p class="text-gray-600 font-normal leading-relaxed text-sm">Tratamiento de fracturas, síndrome del túnel carpiano, dedo en resorte, quistes y tendones.</p>
+                    <h3 class="text-xl md:text-2xl font-serif mb-3 text-gray-900 w-full">Cirugía de Mano</h3>
+                    <p class="text-gray-600 font-normal leading-relaxed text-sm md:text-base">Tratamiento de fracturas, síndrome del túnel carpiano, dedo en resorte, quistes y tendones.</p>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group relative overflow-hidden">
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group relative overflow-hidden text-center md:text-left flex flex-col items-center md:items-start">
                     <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -z-10 transition-transform group-hover:scale-110"></div>
                     <div class="text-primary text-4xl mb-6 bg-white w-16 h-16 rounded-full flex items-center justify-center shadow-sm border border-gray-50 group-hover:bg-primary group-hover:text-white transition-colors duration-500">
                         <i class="fa-solid fa-hand-fist"></i>
                     </div>
-                    <h3 class="text-xl font-serif mb-3 text-gray-900">Muñeca y Antebrazo</h3>
-                    <p class="text-gray-600 font-normal leading-relaxed text-sm">Manejo de fracturas de radio distal, lesiones de ligamentos y artroscopía avanzada.</p>
+                    <h3 class="text-xl md:text-2xl font-serif mb-3 text-gray-900 w-full">Muñeca y Antebrazo</h3>
+                    <p class="text-gray-600 font-normal leading-relaxed text-sm md:text-base">Manejo de fracturas de radio distal, lesiones de ligamentos y artroscopía avanzada.</p>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group relative overflow-hidden">
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group relative overflow-hidden text-center md:text-left flex flex-col items-center md:items-start">
                     <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -z-10 transition-transform group-hover:scale-110"></div>
                     <div class="text-primary text-4xl mb-6 bg-white w-16 h-16 rounded-full flex items-center justify-center shadow-sm border border-gray-50 group-hover:bg-primary group-hover:text-white transition-colors duration-500">
                         <i class="fa-solid fa-bone"></i>
                     </div>
-                    <h3 class="text-xl font-serif mb-3 text-gray-900">Codo y Brazo</h3>
-                    <p class="text-gray-600 font-normal leading-relaxed text-sm">Tratamiento de epicondilitis, fracturas complejas, luxaciones y patologías degenerativas.</p>
+                    <h3 class="text-xl md:text-2xl font-serif mb-3 text-gray-900 w-full">Codo y Brazo</h3>
+                    <p class="text-gray-600 font-normal leading-relaxed text-sm md:text-base">Tratamiento de epicondilitis, fracturas complejas, luxaciones y patologías degenerativas.</p>
                 </div>
 
                 <!-- Card 4 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group relative overflow-hidden">
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group relative overflow-hidden text-center md:text-left flex flex-col items-center md:items-start">
                     <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -z-10 transition-transform group-hover:scale-110"></div>
                     <div class="text-primary text-4xl mb-6 bg-white w-16 h-16 rounded-full flex items-center justify-center shadow-sm border border-gray-50 group-hover:bg-primary group-hover:text-white transition-colors duration-500">
                         <i class="fa-solid fa-person-dots-from-line"></i>
                     </div>
-                    <h3 class="text-xl font-serif mb-3 text-gray-900">Hombro</h3>
-                    <p class="text-gray-600 font-normal leading-relaxed text-sm">Manejo de tendinitis, manguito rotador, luxaciones recidivantes y reemplazos articulares.</p>
+                    <h3 class="text-xl md:text-2xl font-serif mb-3 text-gray-900 w-full">Hombro</h3>
+                    <p class="text-gray-600 font-normal leading-relaxed text-sm md:text-base">Manejo de tendinitis, manguito rotador, luxaciones recidivantes y reemplazos articulares.</p>
                 </div>
             </div>
         </div>
@@ -465,8 +456,7 @@
     <section id="contacto" class="py-24 bg-white border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-                
-                <!-- Columna Izquierda: Textos y Botones principales -->
+
                 <div class="flex flex-col justify-center">
                     <p class="text-xs uppercase tracking-[0.3em] text-primary font-bold mb-4">Contacto</p>
                     <h2 class="text-5xl font-serif text-primary leading-tight mb-6">
@@ -478,7 +468,6 @@
                     </p>
                     
                     <div class="flex flex-col gap-4">
-                        <!-- Abre modal -->
                         <button onclick="openWpModal()" class="w-full bg-primary text-white text-center py-5 text-sm font-bold tracking-widest uppercase hover:bg-primaryDark transition shadow-sm">
                             Solicitar turno por WhatsApp
                         </button>
@@ -490,8 +479,7 @@
 
                 <!-- Columna Derecha -->
                 <div class="flex flex-col gap-3 justify-end h-full"> 
-                    
-                    <!-- WhatsApp (Link directo SIN modal) -->
+
                     <a href="https://wa.me/5491168080580?text=Hola,%20quisiera%20pedir%20un%20turno%20con%20el%20Dr.%20Mondino" target="_blank" class="flex bg-contactBg hover:bg-blue-100 transition-colors shadow-sm group text-left">
                         <div class="w-16 bg-primary text-white flex items-center justify-center text-xl shrink-0 group-hover:bg-primaryDark transition-colors">
                             <i class="fa-solid fa-phone"></i>
@@ -545,23 +533,20 @@
     <footer class="bg-primary text-white pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center pb-8">
             <div class="mb-6 md:mb-0 text-center md:text-left w-full">
-                <!-- LOGO FOOTER (Espacio preparado) -->
-                <!-- TODO: Descomentar img cuando tengas el logo -->
-                <h4 class="text-2xl font-serif text-white tracking-wide flex items-center justify-center md:justify-start gap-2">
-                    <!-- <img src="img/logo.png" alt="Logo Dr Mondino" class="h-8 w-auto"> -->
+                <h4 class="text-3xl font-serif text-white tracking-wide flex items-center justify-center md:justify-start gap-3">
                     Dr. Nicolas Mondino
                 </h4>
-                <p class="text-blue-100 mt-2 font-light">Especialista en Cirugía de Mano y Miembro Superior</p>
+                <p class="text-blue-100 mt-3 font-light text-lg">Especialista en Cirugía de Mano y Miembro Superior</p>
             </div>
         </div>
-        
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="w-full border-t border-white/20 mb-8"></div>
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-blue-100 text-sm font-light text-center md:text-left gap-4 md:gap-0">
             <p>&copy; 2026 Dr. Nicolas Mondino. Todos los derechos reservados.</p>
-            <p class="font-bold text-white">Diseño web por Guido Scotti</p>
+            <p class="font-bold text-white tracking-wider">Diseño web por Guido Scotti</p>
         </div>
     </footer>
 
