@@ -1,22 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // --- 1. MENÚ MÓVIL ---
-    const btnMenu = document.getElementById('mobile-menu-btn');
-    const menu = document.getElementById('mobile-menu');
-    const links = menu.querySelectorAll('a');
-
-    if(btnMenu && menu) {
-        btnMenu.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        links.forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
-        });
-    }
-
     // --- 2. CARRUSEL DE CONSULTORIOS ---
     const carousel = document.getElementById('carousel');
     const prevBtn = document.getElementById('prevBtn');
@@ -49,9 +31,26 @@ document.addEventListener('DOMContentLoaded', () => {
             slides[currentSlide].classList.add('opacity-100');
         }, 3000); 
     }
+
+    // --- 4. CARRUSEL DE CENTROS QUIRÚRGICOS ---
+    const carouselQ = document.getElementById('carouselQuirofanos');
+    const prevBtnQ = document.getElementById('prevBtnQuirofano');
+    const nextBtnQ = document.getElementById('nextBtnQuirofano');
+
+    if (carouselQ && prevBtnQ && nextBtnQ) {
+        const scrollAmount = 400; 
+
+        prevBtnQ.addEventListener('click', () => {
+            carouselQ.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+
+        nextBtnQ.addEventListener('click', () => {
+            carouselQ.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+    }
 });
 
-// --- 4. FUNCIONES DEL MODAL DE WHATSAPP ---
+// --- 5. FUNCIONES DEL MODAL DE WHATSAPP ---
 function openWpModal() {
     const modal = document.getElementById('wpModal');
     const modalContent = document.getElementById('wpModalContent');
